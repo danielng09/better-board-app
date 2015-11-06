@@ -1,7 +1,7 @@
 {
   "name": "better-board-app",
   "version": "1.0.0",
-  "description": "browser word scramble game",
+  "description": "job posting aggregator",
   "main": "index.js",
   "author": "danielng09",
   "license": "ISC",
@@ -15,12 +15,33 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react": "^0.13.3"
+    "axios": "^0.5.4",
+    "react": "^0.14.2",
+    "react-redux": "^0.8.0",
+    "react-router": "^1.0.0-rc3",
+    "history": "^1.12.0",
+    "redux": "^1.0.0-rc",
+    "request": "^2.64.0",
+    "fs": "^0.0.2",
+    "net": "^1.0.0",
+    "tls": "^0.0.1"
   },
   "devDependencies": {
+    "autoprefixer-core": "^5.1.11",
     "babel-core": "^5.2.6",
     "babel-loader": "^5.0.0",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.8.2"
+    "colors": "^1.1.0",
+    "css-loader": "^0.14.0",
+    "cssnext": "^1.4.0",
+    "cssnext-loader": "^1.0.1",
+    "csswring": "^3.0.4",
+    "postcss": "^4.1.8",
+    "postcss-loader": "^0.4.1",
+    "postcss-nested": "^0.3.1",
+    "style-loader": "^0.12.1",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2",
+    "wordwrap": "1.0.0",
+    "json-loader": "^0.5.3"
   }
 }

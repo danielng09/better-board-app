@@ -1,4 +1,4 @@
 {
   "stage": 0,
-  "loose": "all"
+  "loose": ["es6.modules", "es6.classes"],
 }
