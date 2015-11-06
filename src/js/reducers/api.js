@@ -3,7 +3,6 @@ const initialState = {
 }
 
 export default function api(state = initialState, action) {
-  console.log(action.type);
   switch(action.type) {
     case 'GET_POSTINGS_REQUEST':
       return {
@@ -13,7 +12,7 @@ export default function api(state = initialState, action) {
     case 'GET_POSTINGS_SUCCESS':
       return {
         ...state,
-        postings: action.res,
+        postings: action.res.postings,
         loadingPosts: false
       }
     case 'GET_POSTINGS_FAILURE':
