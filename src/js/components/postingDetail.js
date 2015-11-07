@@ -15,7 +15,7 @@ export default class PostingDetail extends React.Component {
 
   render () {
     let { postDetail } = this.props;
-
+    let des = postDetail.description;
     return (
       <div id='job-posting-detail' className="col-md-4">
         <p className="detail-title">{postDetail.title}</p>
