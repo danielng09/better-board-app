@@ -15,11 +15,19 @@ export default class PostingIndex extends React.Component {
   }
 
   displayPostingItem (item) {
+    const length = 50;
+    let title = item.title;
+    let trimmedTitle = title.length > length ?
+                        title.substring(0, length - 3) + "..." :
+                        title;
      return (
        <PostingIndexItem
-         title={item.title}
+         key={item.id}
+         title={trimmedTitle}
          company={item.company}
-         date_posted={item.date_posted} />
+         activity={item.time_ago}
+         location={item.location}
+         source={item.source} />
      )
   }
 
@@ -27,15 +35,9 @@ export default class PostingIndex extends React.Component {
     console.log('render postingsIndex component')
     var { postings } = this.props;
     return (
-      <div id='postings-index-container'>
-        <table style={{'width': '100%'}}>
-          <tr>
-            <td>Title</td>
-            <td>Company</td>
-            <td>Date Posted</td>
-          </tr>
-          { postings.map(this.displayPostingItem) }
-        </table>
+      <div id="job-postings-index" className="col-md-offset-1 col-md-6">
+        <h1 id="job-postings-header">Better Board</h1>
+        { postings.map(this.displayPostingItem) }
       </div>
     )
   }

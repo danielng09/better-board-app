@@ -1,0 +1,40 @@
+.job-postings-item {
+  border-bottom: 1px solid rgba(208, 213, 216, 0.3);
+  padding: 1em 1em 1em 2.2em;
+  color: white;
+  position: relative;
+}
+
+.job-postings-item:hover {
+  cursor: pointer;
+  background-color: rgba(0,151,207,0.2);
+}
+
+.job-postings-item .title {
+  font-size: medium;
+  color: #62BEFF;
+}
+
+.job-postings-item .company {
+  font-weight: bold;
+  display: left;
+}
+
+.job-postings-item .activity {
+  float: right;
+  text-align: right;
+}
+
+.job-postings-item .location {
+  margin-left: 15px;
+}
+
+.job-postings-item .source-image {
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  margin: 10px auto;
+}

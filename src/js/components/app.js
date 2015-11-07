@@ -1,4 +1,3 @@
-require('../../css/app.css')
 import React from 'react';
 import PostingIndex from './postingIndex';
 
@@ -7,8 +6,7 @@ export default class App extends React.Component {
     console.log('render App component');
 
     return (
-      <div id="mainApp">
-        <h1>Better Board</h1>
+      <div id="main-app">
         <PostingIndex />
       </div>
     )

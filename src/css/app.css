@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+}
+
+body#background {
+  background: url('http://res.cloudinary.com/ds6oys8ca/image/upload/v1446864449/photo-120916629_fcmpir.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  width: 100%;
+  height: 100%;
+}
