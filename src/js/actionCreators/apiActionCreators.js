@@ -16,3 +16,19 @@ export function fetchJobPostings() {
     promise: promise
   }
 }
+
+export function fetchJobDetail(id) {
+  var promise = new Promise((resolve, reject) => {
+    request(apiConstants.POSTINGS_INDEX_URL + "/" + id, function(error, response, body) {
+      let postDetail = JSON.parse(body);
+      resolve({ postDetail: postDetail })
+    }, function(err) {
+      reject(err);
+    });
+  })
+
+  return {
+    types: ["GET_POST_REQUEST", "GET_POST_SUCCESS", "GET_POST_FAILURE"],
+    promise: promise
+  }
+}

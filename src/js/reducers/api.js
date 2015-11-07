@@ -1,5 +1,6 @@
 const initialState = {
-  postings: []
+  postings: [],
+  postDetail: {}
 }
 
 export default function api(state = initialState, action) {
@@ -9,17 +10,39 @@ export default function api(state = initialState, action) {
         ...state,
         loadingPosts: true
       }
+
     case 'GET_POSTINGS_SUCCESS':
       return {
         ...state,
         postings: action.res.postings,
         loadingPosts: false
       }
+
     case 'GET_POSTINGS_FAILURE':
       return {
         ...state,
         loadingPosts: false
       }
+
+    case 'GET_POST_REQUEST':
+      return {
+        ...state,
+        loadingPost: true
+      }
+
+    case 'GET_POST_SUCCESS':
+      return {
+        ...state,
+        postDetail: action.res.postDetail,
+        loadingPost: false
+      }
+
+    case 'GET_POST_FAILURE':
+      return {
+        ...state,
+        loadingPost: false
+      }
+
     default:
       return state;
   }

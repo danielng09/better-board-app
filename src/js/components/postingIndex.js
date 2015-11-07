@@ -22,7 +22,9 @@ export default class PostingIndex extends React.Component {
                         title;
      return (
        <PostingIndexItem
+         dispatch={this.props.dispatch}
          key={item.id}
+         id={item.id}
          title={trimmedTitle}
          company={item.company}
          activity={item.time_ago}
@@ -32,12 +34,11 @@ export default class PostingIndex extends React.Component {
   }
 
   render () {
-    console.log('render postingsIndex component')
     var { postings } = this.props;
     return (
       <div id="job-postings-index" className="col-md-offset-1 col-md-6">
         <h1 id="job-postings-header">Better Board</h1>
-        { postings.map(this.displayPostingItem) }
+        { postings.map(::this.displayPostingItem) }
       </div>
     )
   }
