@@ -22,5 +22,17 @@
 .detail-source {
 }
 
-.deailta-location {
+.detail-location {
+}
+
+.detail-link-img {
+  width: 50px;
+}
+
+.detail-url {
+  /*width: 300px
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;*/
 }

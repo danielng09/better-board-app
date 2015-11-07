@@ -21,7 +21,9 @@ export default class PostingIndexItem extends React.Component {
           <i style={{color: '#DBDBDB'}} className="fa fa-map-marker" />&nbsp;&nbsp;
           {this.props.location}
         </span>
-        <img className="source-image" src={link} />
+        <span className="btn btn-default remove-button-features source-logo">
+          <img className="source-image" src={link} />
+        </span>
       </div>
     )
   }

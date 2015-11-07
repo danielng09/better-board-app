@@ -15,7 +15,8 @@ export default class PostingDetail extends React.Component {
 
   render () {
     let { postDetail } = this.props;
-    let des = postDetail.description;
+    let link = 'http://res.cloudinary.com/ds6oys8ca/image/upload/v1446920073/Indeed-Logo-image_vgzkpl.png'
+
     return (
       <div id='job-posting-detail' className="col-md-4">
         <p className="detail-title">{postDetail.title}</p>
@@ -30,9 +31,10 @@ export default class PostingDetail extends React.Component {
           {postDetail.date_posted}
         </p>
         <p>{postDetail.description}</p>
-        <a className="btn btn-success detail-url"
+        <a className="btn btn-default detail-url"
            target="_blank"
-           href={postDetail.url}>Original</ a>
+           href={postDetail.url}><img className="source-image detail-link-img" src={link} />
+        </ a>
       </div>
     )
   }
