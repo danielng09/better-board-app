@@ -15,15 +15,24 @@ export default class PostingDetail extends React.Component {
 
   render () {
     let { postDetail } = this.props;
+
     return (
-      <div id="job-posting-detail" className="col-md-4">
-        <p>{postDetail.title}</p>
-        <p>{postDetail.company}</p>
-        <p>{postDetail.source}</p>
-        <p>{postDetail.location}</p>
-        <p>{postDetail.date_posted}</p>
-        {postDetail.description}
-        <a href={postDetail.url} />
+      <div id='job-posting-detail' className="col-md-4">
+        <p className="detail-title">{postDetail.title}</p>
+        <p className="detail-company">{postDetail.company}</p>
+        <p className="detail-source">{postDetail.source}</p>
+        <p className="detail-location">
+          <i style={{color: '#DBDBDB'}} className="fa fa-map-marker" />&nbsp;&nbsp;
+          {postDetail.location}
+        </p>
+        <p className="detail-date">
+          <i className="fa fa-calendar"></i>&nbsp;
+          {postDetail.date_posted}
+        </p>
+        <p>{postDetail.description}</p>
+        <a className="btn btn-success detail-url"
+           target="_blank"
+           href={postDetail.url}>Original</ a>
       </div>
     )
   }
