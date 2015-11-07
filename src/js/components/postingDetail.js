@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
+import imageUrlConstants from '../constants/imageUrlConstants';
 
 @connect(state => {
   return (
@@ -31,9 +32,9 @@ export default class PostingDetail extends React.Component {
           {postDetail.date_posted}
         </p>
         <p>{postDetail.description}</p>
-        <a className="btn btn-default detail-url"
+        <a className="btn btn-success detail-url"
            target="_blank"
-           href={postDetail.url}><img className="source-image detail-link-img" src={link} />
+           href={postDetail.url}><i className="fa fa-link"></i>&nbsp;&nbsp;Original
         </ a>
       </div>
     )

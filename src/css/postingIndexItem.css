@@ -52,6 +52,7 @@
   color: #333;
   background-color: #fff;
   border-color: #ccc;
+  cursor: none;
 }
 
 .job-postings-item .source-image {

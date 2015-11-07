@@ -1,5 +1,6 @@
 import React from 'react';
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
+import imageUrlConstants from '../constants/imageUrlConstants';
 
 export default class PostingIndexItem extends React.Component {
   handlePostingClick (id) {
@@ -8,7 +9,7 @@ export default class PostingIndexItem extends React.Component {
 
   render () {
     let link = 'http://res.cloudinary.com/ds6oys8ca/image/upload/v1446920073/Indeed-Logo-image_vgzkpl.png'
-
+    debugger;
     return (
       <div className="job-postings-item" onClick={this.handlePostingClick.bind(this, this.props.id)}>
         <span className="activity">
@@ -22,7 +23,7 @@ export default class PostingIndexItem extends React.Component {
           {this.props.location}
         </span>
         <span className="btn btn-default remove-button-features source-logo">
-          <img className="source-image" src={link} />
+          <img className="source-image" src={imageUrlConstants[this.props.source.toUpperCase()]} />
         </span>
       </div>
     )
