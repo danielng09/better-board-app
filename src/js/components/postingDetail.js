@@ -16,7 +16,7 @@ export default class PostingDetail extends React.Component {
 
   render () {
     let { postDetail } = this.props;
-    let link = 'http://res.cloudinary.com/ds6oys8ca/image/upload/v1446920073/Indeed-Logo-image_vgzkpl.png'
+    // let desc = postDetail.description ? postDetail.description.replace(/<br \/>/g, "") : postDetail.description;
 
     return (
       <div id='job-posting-detail' className="col-md-4">
@@ -31,7 +31,8 @@ export default class PostingDetail extends React.Component {
           <i className="fa fa-calendar"></i>&nbsp;
           {postDetail.date_posted}
         </p>
-        <p>{postDetail.description}</p>
+        <p className="detail-description"
+          dangerouslySetInnerHTML={{__html: postDetail.description }} />
         <a className="btn btn-success detail-url"
            target="_blank"
            href={postDetail.url}><i className="fa fa-link"></i>&nbsp;&nbsp;Original

@@ -29,6 +29,14 @@
   width: 50px;
 }
 
+.detail-description {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  max-height: 500px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
 .detail-url {
   /*width: 300px
   display: -webkit-box;
