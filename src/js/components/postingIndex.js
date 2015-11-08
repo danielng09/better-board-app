@@ -36,8 +36,10 @@ export default class PostingIndex extends React.Component {
   render () {
     var { postings } = this.props;
     return (
-      <div id="job-postings-index" className="col-md-offset-1 col-md-6">
-        { postings.map(::this.displayPostingItem) }
+      <div className="col-md-7">
+        <div id="job-postings-index">
+          { postings.map(::this.displayPostingItem) }
+        </div>
       </div>
     )
   }

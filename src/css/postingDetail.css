@@ -1,28 +1,19 @@
 #job-posting-detail {
-  position: fixed;
-  display: inline-block;
-  margin-left: 25px;
   margin-top: 20px;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.7);
   box-shadow: rgba(0,0,0,.05) 0 1px 3px 0;
   border-radius: 10px;
   color: white;
-  padding: 1em 1em 1em 2.2em;
+  padding: 2em 1em 1em 2.2em;
 }
 
 .detail-title {
   font-size: medium;
-  color: #62BEFF;
+  color: #FF9A6A;
 }
 
 .detail-company {
   font-weight: bold;
-}
-
-.detail-source {
-}
-
-.detail-location {
 }
 
 .detail-link-img {
@@ -35,12 +26,4 @@
   height: 400px;
   overflow: auto;
   margin-bottom: 20px;
-}
-
-.detail-url {
-  /*width: 300px
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: center;
-  -webkit-box-align: center;*/
 }
