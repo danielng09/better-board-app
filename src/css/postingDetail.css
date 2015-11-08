@@ -9,11 +9,12 @@
 
 .detail-title {
   font-size: medium;
-  color: #FF9A6A;
+  color: #FDAC3A;
 }
 
 .detail-company {
   font-weight: bold;
+  display: left;
 }
 
 .detail-link-img {
@@ -21,9 +22,22 @@
 }
 
 .detail-description {
-  -webkit-margin-before: 0em;
+  -webkit-margin-before: 1.5em;
   -webkit-margin-after: 0em;
   height: 400px;
   overflow: auto;
   margin-bottom: 20px;
+}
+
+#job-posting-detail .source-logo {
+  position: absolute;
+  right: 45px;
+  top: 125px;
+}
+
+#job-posting-detail .source-image {
+  height: 20px;
+}
+#job-posting-detail .activity {
+  margin-left: 15px;
 }

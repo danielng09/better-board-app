@@ -5,7 +5,7 @@ body {
 }
 
 body#background {
-  background: url('http://wallcomphd.com/wp-content/uploads/2015/04/Autumn-Forest-Patrol-HD.jpg') no-repeat center center fixed;
+  background: url('http://res.cloudinary.com/ds6oys8ca/image/upload/c_scale,w_1200/v1447023829/Autumn-Forest-Patrol-HD_zryyub.jpg') no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,5 +16,13 @@ body#background {
 
 .navbar-inverse {
   background-color: #40474e;
+  font-weight: bold;
+}
 
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #FDAC3A
 }

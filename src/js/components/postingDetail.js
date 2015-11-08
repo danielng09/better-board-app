@@ -16,7 +16,7 @@ export default class PostingDetail extends React.Component {
 
   render () {
     let { postDetail } = this.props;
-    // let desc = postDetail.description ? postDetail.description.replace(/<br \/>/g, "") : postDetail.description;
+    let sourceName = postDetail.source ? postDetail.source.toUpperCase() : postDetail.source;
 
     return (
       <div className="col-md-5">
@@ -26,15 +26,22 @@ export default class PostingDetail extends React.Component {
             <i className="fa fa-building-o" />&nbsp;&nbsp;
             {postDetail.company}
           </p>
-          <p className="detail-source">{postDetail.source}</p>
+          <span className="btn btn-default remove-button-features source-logo">
+            <img className="source-image" src={imageUrlConstants[sourceName]} />
+          </span>
           <p className="detail-location">
             <i style={{color: '#DBDBDB'}} className="fa fa-map-marker" />&nbsp;&nbsp;
             {postDetail.location}
           </p>
-          <p className="detail-date">
-            <i className="fa fa-calendar"></i>&nbsp;
+          <span className="detail-date">
+            <i className="fa fa-calendar"></i>&nbsp;&nbsp;
             {postDetail.date_posted}
-          </p>
+          </span>
+          <span className="activity">
+            <i style={{color:'#DBDBDB'}} className="fa fa-clock-o" />&nbsp;&nbsp;
+            {'Posted '  + postDetail.time_ago + ' ago'}
+          </span>
+
           <p className="detail-description"
             dangerouslySetInnerHTML={{__html: postDetail.description }} />
           <a className="btn btn-info detail-url"
