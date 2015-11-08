@@ -16,7 +16,10 @@ export default class PostingIndexItem extends React.Component {
           {'Posted '  + this.props.activity + ' ago'}
         </span>
         <p className='title'>{this.props.title}</p>
-        <span className='company'>{this.props.company}</span>
+        <span className='company'>
+          <i className="fa fa-building-o" />&nbsp;&nbsp;
+          {this.props.company}
+        </span>
         <span className="location">
           <i style={{color: '#DBDBDB'}} className="fa fa-map-marker" />&nbsp;&nbsp;
           {this.props.location}

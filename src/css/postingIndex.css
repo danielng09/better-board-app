@@ -1,12 +1,14 @@
 #job-postings-index {
   margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 15px;
   background-color: rgba(0,0,0,0.6);
   box-shadow: rgba(0,0,0,.05) 0 1px 3px 0;
   border-radius: 10px;
 }
 
-#job-postings-header {
+/*#job-postings-header {
   color: white;
   padding-top: 15px;
   text-align: center;
-}
+}*/

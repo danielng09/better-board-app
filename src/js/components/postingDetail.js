@@ -21,7 +21,10 @@ export default class PostingDetail extends React.Component {
     return (
       <div id='job-posting-detail' className="col-md-4">
         <p className="detail-title">{postDetail.title}</p>
-        <p className="detail-company">{postDetail.company}</p>
+        <p className="detail-company">
+          <i className="fa fa-building-o" />&nbsp;&nbsp;
+          {postDetail.company}
+        </p>
         <p className="detail-source">{postDetail.source}</p>
         <p className="detail-location">
           <i style={{color: '#DBDBDB'}} className="fa fa-map-marker" />&nbsp;&nbsp;
@@ -33,7 +36,7 @@ export default class PostingDetail extends React.Component {
         </p>
         <p className="detail-description"
           dangerouslySetInnerHTML={{__html: postDetail.description }} />
-        <a className="btn btn-success detail-url"
+        <a className="btn btn-info detail-url"
            target="_blank"
            href={postDetail.url}><i className="fa fa-link"></i>&nbsp;&nbsp;Original
         </ a>

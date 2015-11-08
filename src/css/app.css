@@ -5,11 +5,12 @@ body {
 }
 
 body#background {
-  background: url('http://res.cloudinary.com/ds6oys8ca/image/upload/v1446864449/photo-120916629_fcmpir.jpg') no-repeat center center fixed;
+  background: url('http://wallcomphd.com/wp-content/uploads/2015/04/HD-Tool-Flat-Wallpaper.jpg') no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 10
+  0%;
 }
