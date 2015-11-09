@@ -1,0 +1,34 @@
+#footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 40px;
+  clear:both;
+  color: white;
+  text-align: center;
+}
+
+#footer a{
+  color: white;
+  text-decoration: none;
+}
+
+#footer .icon {
+  font-size: 30px;
+  border-left: 1px solid white;
+  margin: 10px 0px;
+  padding: 0px 15px;
+}
+
+#footer .icon:first-child {
+  border: none;
+}
+
+#footer .icon:hover {
+  color: #FB8456;
+  cursor: pointer;
+}
+
+#footer p{
+  font-size: 15px;
+  font-weight: bold;
+}
