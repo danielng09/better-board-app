@@ -1,8 +1,39 @@
 #job-postings-index {
-  margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 15px;
   background-color: rgba(0,0,0,0.7);
   box-shadow: rgba(0,0,0,.05) 0 1px 3px 0;
   border-radius: 10px;
+  display: inline-block;
+  width: 90%;
+}
+
+#index-container {
+  padding: 20px 0px;
+}
+
+#left-chevron {
+  font-size: 200px;
+  color: white;
+  position: fixed;
+  left: 80px;
+  top: 385px;
+}
+
+.fa-angle-left:hover {
+  cursor: pointer;
+  color: #FB8456;
+}
+
+#right-chevron {
+  font-size: 200px;
+  color: white;
+  position: fixed;
+  left: 1010px;
+  top: 385px;
+}
+
+.fa-angle-right:hover {
+  cursor: pointer;
+  color: #FB8456;
 }

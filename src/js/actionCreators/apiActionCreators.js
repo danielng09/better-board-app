@@ -6,7 +6,7 @@ export function fetchJobPostings(page) {
     let url = apiConstants.POSTINGS_INDEX_URL;
     request.get({url: url, qs: {page: page}, json: true}, (page, error, response, body) => {
       let postings = body;
-      resolve({ postings, page: page + 1 })
+      resolve({ postings, page: page})
     }.bind(null, page), function(err) {
       reject(err);
     });
