@@ -8,7 +8,6 @@ export default class PostingIndexItem extends React.Component {
   }
 
   render () {
-
     return (
       <div className="job-postings-item" onClick={this.handlePostingClick.bind(this, this.props.id)}>
         <span className="activity">

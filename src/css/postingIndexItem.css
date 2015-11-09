@@ -11,8 +11,8 @@
 }
 
 .job-postings-item .title {
-  font-size: medium;
   color: #FDAC3A;
+  font-weight: bold;
 }
 
 .job-postings-item .company {

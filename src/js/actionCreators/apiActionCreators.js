@@ -1,12 +1,13 @@
 import request from 'request';
 import apiConstants from '../constants/apiConstants';
 
-export function fetchJobPostings() {
+export function fetchJobPostings(page) {
   var promise = new Promise((resolve, reject) => {
-    request(apiConstants.POSTINGS_INDEX_URL, function(error, response, body) {
-      let postings = JSON.parse(body);
-      resolve({ postings })
-    }, function(err) {
+    let url = apiConstants.POSTINGS_INDEX_URL;
+    request.get({url: url, qs: {page: page}, json: true}, (page, error, response, body) => {
+      let postings = body;
+      resolve({ postings, page: page + 1 })
+    }.bind(null, page), function(err) {
       reject(err);
     });
   });
@@ -19,8 +20,9 @@ export function fetchJobPostings() {
 
 export function fetchJobDetail(id) {
   var promise = new Promise((resolve, reject) => {
-    request(apiConstants.POSTINGS_INDEX_URL + "/" + id, function(error, response, body) {
-      let postDetail = JSON.parse(body);
+    let url = apiConstants.POSTINGS_INDEX_URL + "/" + id;
+    request.get({url: url, json: true }, function(error, response, body) {
+      let postDetail = body;
       resolve({ postDetail: postDetail })
     }, function(err) {
       reject(err);

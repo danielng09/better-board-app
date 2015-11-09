@@ -1,6 +1,7 @@
 const initialState = {
   postings: [],
-  postDetail: {}
+  postDetail: {},
+  page: 1
 }
 
 export default function api(state = initialState, action) {
@@ -14,7 +15,8 @@ export default function api(state = initialState, action) {
     case 'GET_POSTINGS_SUCCESS':
       return {
         ...state,
-        postings: action.res.postings,
+        postings: state.postings.concat(action.res.postings),
+        page: action.res.page,
         loadingPosts: false
       }
 
