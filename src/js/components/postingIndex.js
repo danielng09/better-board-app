@@ -48,13 +48,13 @@ export default class PostingIndex extends React.Component {
     var { postings } = this.props;
     return (
       <div className="col-md-7" id="index-container">
-        <div id="left-chevron" onClick={::this.handlePrevPage}>
+        <div className="chevron col-md-1" onClick={::this.handlePrevPage}>
           <i className="fa fa-angle-left"></i>
         </div>
-        <div id="job-postings-index">
+        <div id="job-postings-index" className="col-md-10">
           { postings.map(::this.displayPostingItem) }
         </div>
-        <div id="right-chevron" onClick={::this.handleNextPage}>
+        <div className="chevron col-md-1" onClick={::this.handleNextPage}>
           <i className="fa fa-angle-right"></i>
         </div>
       </div>

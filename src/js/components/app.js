@@ -8,10 +8,8 @@ export default class App extends React.Component {
     return (
       <div id="main-app">
         <Nav />
-        <div id='content' className='col-md-offset-1 col-md-10'>
-          <PostingIndex />
-          <PostingDetail />
-        </div>
+        <PostingIndex />
+        <PostingDetail />
       </div>
     )
   }
