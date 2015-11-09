@@ -6,7 +6,8 @@ import PostingIndexItem from './postingIndexItem';
 @connect(state => {
   return {
     postings: state.api.postings,
-    page: state.api.page
+    page: state.api.page,
+    total_pages: state.api.total_pages
   }
 })
 
@@ -18,11 +19,13 @@ export default class PostingIndex extends React.Component {
 
   handlePrevPage() {
     let { page } = this.props;
+    if (page === 1) { return; }
     this.props.dispatch(apiActionCreators.fetchJobPostings(page - 1))
   }
 
   handleNextPage() {
-    let { page } = this.props;
+    let { page, total_pages } = this.props;
+    if (page === total_pages ) { return; }
     this.props.dispatch(apiActionCreators.fetchJobPostings(page + 1))
   }
 
@@ -45,13 +48,14 @@ export default class PostingIndex extends React.Component {
   }
 
   render () {
-    var { postings } = this.props;
+    var { postings, page, total_pages } = this.props;
     return (
       <div className="col-md-7" id="index-container">
         <div className="chevron col-md-1" onClick={::this.handlePrevPage}>
           <i className="fa fa-angle-left"></i>
         </div>
         <div id="job-postings-index" className="col-md-10">
+          <p id="page-info">Showing page {page} of {total_pages}</p>
           { postings.map(::this.displayPostingItem) }
         </div>
         <div className="chevron col-md-1" onClick={::this.handleNextPage}>

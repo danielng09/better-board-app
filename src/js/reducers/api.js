@@ -1,7 +1,8 @@
 const initialState = {
   postings: [],
   postDetail: {},
-  page: 1
+  page: 1,
+  total_pages: 1
 }
 
 export default function api(state = initialState, action) {
@@ -17,6 +18,7 @@ export default function api(state = initialState, action) {
         ...state,
         postings: action.res.postings,
         page: action.res.page,
+        total_pages: action.res.total_pages,
         loadingPosts: false
       }
 

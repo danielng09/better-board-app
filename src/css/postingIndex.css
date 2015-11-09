@@ -27,3 +27,9 @@
   cursor: pointer;
   color: #FB8456;
 }
+
+#page-info {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
