@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.job-postings-item:last-child {
+  border-bottom: none;
+}
+
 .job-postings-item:hover {
   cursor: pointer;
   background-color: rgba(253,109,72,0.2);
