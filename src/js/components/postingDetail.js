@@ -20,7 +20,7 @@ export default class PostingDetail extends React.Component {
 
     return (
       <div className="col-md-5">
-        <div id='job-posting-detail'>
+        <div id='job-posting-detail' className='fixed'>
           <p className="detail-title">{postDetail.title}</p>
           <p className="detail-company">
             <i className="fa fa-building-o" />&nbsp;&nbsp;
