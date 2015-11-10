@@ -6,7 +6,6 @@
 }
 
 #login-container {
-  /*background-color: rgba(0,0,0,0.2);*/
   position: relative;
   top: 41em;
   left: 14em;
@@ -14,7 +13,7 @@
 }
 
 #login-tagline {
-  color: #DC4E41;
+  color: #FD7C4F;
   font-weight: bold;
   font-size: 20px;
 }

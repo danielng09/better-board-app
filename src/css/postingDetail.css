@@ -30,7 +30,7 @@
 .detail-description {
   -webkit-margin-before: 1.5em;
   -webkit-margin-after: 0em;
-  height: 400px;
+  height: 70%;
   overflow: auto;
   margin-bottom: 20px;
 }
