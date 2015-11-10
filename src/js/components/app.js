@@ -31,7 +31,6 @@ export default class App extends React.Component {
       return (
         <div id="main-app">
           <Login />
-          <Footer />
         </div>
       )
     }

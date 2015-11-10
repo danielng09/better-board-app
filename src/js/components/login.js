@@ -19,15 +19,17 @@ export default class Login extends React.Component {
 
   handleSignIn(googleUser) {
     let profile = googleUser.getBasicProfile();
-    this.refs.googleSignIn.style.display = "none";
+    document.getElementById('login-container').style.display = 'none';
     this.props.dispatch(authActionCreators.login(profile));
   }
 
   render() {
     let { user } = this.props;
     return (
-      <div>
-        <div ref="googleSignIn" id="g-signin2" />
+      <div id='login-container'>
+        <div id="login-title"><i className="fa fa-thumb-tack" />&nbsp;&nbsp;better board</div>
+        <p id="login-tagline">all yours postings in one spot!</p>
+        <div id="g-signin2" />
       </div>
     )
   }

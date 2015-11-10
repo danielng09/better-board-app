@@ -1,0 +1,23 @@
+.navbar-inverse {
+  background-color: #40474e;
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #FDAC3A
+}
+
+#signout {
+  background-color: #dc4e41;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+#signout:hover {
+  background-color: #FD7C4F
+}
