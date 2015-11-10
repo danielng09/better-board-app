@@ -1,6 +1,7 @@
 .navbar-inverse {
   background-color: #DC4E41;
   font-weight: bold;
+  height: 6vh;
 }
 
 .navbar-inverse .navbar-brand {
@@ -16,6 +17,7 @@
   color: white;
   text-decoration: none;
   padding: 15px 20px;
+  height: 6vh;
 }
 
 #signout:hover {

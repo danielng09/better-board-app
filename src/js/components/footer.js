@@ -8,11 +8,12 @@ export default class Footer extends React.Component {
     const email = "mailto:dvng13@gmail.com";
 
     return (
-      <div id="footer">
-        <i className="fa fa-github-square icon"><a href={github} /></i>
-        <i className="fa fa-linkedin-square icon"><a href={linkedin} /></i>
-        <i className="fa fa-envelope icon"><a href={email} /></i>
-        <p>Created by Daniel Ng</p>
+      <div id="footer-container">
+        <div id="footer">
+          <i className="fa fa-github-square icon"><a href={github} /></i>
+          <i className="fa fa-linkedin-square icon"><a href={linkedin} /></i>
+          <i className="fa fa-envelope icon"><a href={email} /></i>
+        </div>
       </div>
     )
   }
