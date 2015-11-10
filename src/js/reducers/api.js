@@ -16,7 +16,7 @@ export default function api(state = initialState, action) {
     case 'GET_POSTINGS_SUCCESS':
       return {
         ...state,
-        postings: action.res.postings,
+        postings: state.postings.concat(action.res.postings),
         page: action.res.page,
         total_pages: action.res.total_pages,
         loadingPosts: false

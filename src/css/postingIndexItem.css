@@ -7,6 +7,7 @@
 
 .job-postings-item:last-child {
   border-bottom: none;
+  margin-bottom: 15px;
 }
 
 .job-postings-item:hover {

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
 import PostingIndexItem from './postingIndexItem';
+import Infinite from 'react-infinite';
 
 @connect(state => {
   return {
@@ -17,13 +18,7 @@ export default class PostingIndex extends React.Component {
     this.props.dispatch(apiActionCreators.fetchJobPostings(page));
   }
 
-  handlePrevPage() {
-    let { page } = this.props;
-    if (page === 1) { return; }
-    this.props.dispatch(apiActionCreators.fetchJobPostings(page - 1))
-  }
-
-  handleNextPage() {
+  handleLoadNextPage() {
     let { page, total_pages } = this.props;
     if (page === total_pages ) { return; }
     this.props.dispatch(apiActionCreators.fetchJobPostings(page + 1))
@@ -50,17 +45,14 @@ export default class PostingIndex extends React.Component {
   render () {
     var { postings, page, total_pages } = this.props;
     return (
-      <div className="col-md-7" id="index-container">
-        <div className="chevron col-md-1" onClick={::this.handlePrevPage}>
-          <i className="fa fa-angle-left"></i>
-        </div>
-        <div id="job-postings-index" className="col-md-10">
-          <p id="page-info">Showing page {page} of {total_pages}</p>
+      <div id="job-postings-index">
+        <p id="page-info">Showing page {page} of {total_pages}</p>
+        <Infinite elementHeight={86}
+                  containerHeight={630}
+                  infiniteLoadBeginEdgeOffset={150}
+                  onInfiniteLoad={::this.handleLoadNextPage}>
           { postings.map(::this.displayPostingItem) }
-        </div>
-        <div className="chevron col-md-1" onClick={::this.handleNextPage}>
-          <i className="fa fa-angle-right"></i>
-        </div>
+        </Infinite>;
       </div>
     )
   }
