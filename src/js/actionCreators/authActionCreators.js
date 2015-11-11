@@ -4,6 +4,7 @@ import apiConstants from '../constants/apiConstants';
 export function login(profile) {
   var promise = new Promise((resolve, reject) => {
     let url = apiConstants.SESSIONS_URL;
+    console.log(url)
     let data = { pid: profile.getId(),
                  name: profile.getName(),
                  imageUrl: profile.getImageUrl(),
