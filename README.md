@@ -14,12 +14,12 @@ The frontend of the application uses a combination of modern technologies includ
 ###Features
 Minimum Viable Product:
 - [x] OAuth using Google
-- [ ] Aggregate job postings using combination of APIs and web scraping
+- [x] Aggregate job postings using combination of APIs and web scraping
   - [x] Indeed
   - [x] Github
   - [x] StackOverflow
   - [ ] VentureLoop
-  - [ ] Craigslist
+  - [x] Craigslist
   - [ ] StartupHire
 - [x] Automatically loads new postings
 - [ ] Search for postings given params like string, location, and post date
