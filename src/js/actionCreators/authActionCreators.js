@@ -1,8 +1,9 @@
 import request from 'request';
+import apiConstants from '../constants/apiConstants';
 
 export function login(profile) {
   var promise = new Promise((resolve, reject) => {
-    let url = "http://localhost:3000/sessions";
+    let url = apiConstants.SESSIONS_URL;
     let data = { pid: profile.getId(),
                  name: profile.getName(),
                  imageUrl: profile.getImageUrl(),
