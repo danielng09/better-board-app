@@ -28,7 +28,7 @@ export default class Login extends React.Component {
     return (
       <div id='login-container'>
         <div id="login-title"><i className="fa fa-thumb-tack" />&nbsp;&nbsp;better board</div>
-        <p id="login-tagline">all yours postings in one spot!</p>
+        <p id="login-tagline">all your postings in one spot!</p>
         <div id="g-signin2" />
       </div>
     )

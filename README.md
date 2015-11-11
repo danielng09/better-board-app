@@ -1,6 +1,8 @@
 #Better Board
 An application that aggregates job postings from around the web and helps you manage them so you can keep on top of your job search.
 
+[Live Link](http://www.danielng.me/better_board_app)
+
 ###Description
 Backend:
 The backend of the Better Board application serves JSON API endpoints using Ruby on Rails. It scrapes from multiple sources using a combination of external APIs, RSS feeds, and web scrapers (mechanize).
