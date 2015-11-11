@@ -20444,11 +20444,11 @@
 
 	var _Nav2 = _interopRequireDefault(_Nav);
 
-	var _login = __webpack_require__(349);
+	var _login = __webpack_require__(350);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _postingIndex = __webpack_require__(350);
+	var _postingIndex = __webpack_require__(351);
 
 	var _postingIndex2 = _interopRequireDefault(_postingIndex);
 
@@ -21149,9 +21149,13 @@
 
 	var _request2 = _interopRequireDefault(_request);
 
+	var _constantsApiConstants = __webpack_require__(349);
+
+	var _constantsApiConstants2 = _interopRequireDefault(_constantsApiConstants);
+
 	function login(profile) {
 	  var promise = new Promise(function (resolve, reject) {
-	    var url = "http://localhost:3000/sessions";
+	    var url = _constantsApiConstants2['default'].SESSIONS_URL;
 	    var data = { pid: profile.getId(),
 	      name: profile.getName(),
 	      imageUrl: profile.getImageUrl(),
@@ -63185,6 +63189,22 @@
 
 /***/ },
 /* 349 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	exports.__esModule = true;
+	var ROOT = "https://better-board-api.herokuapp.com";
+
+	exports["default"] = {
+	  ROOT: ROOT,
+	  POSTINGS_INDEX_URL: ROOT + "/api/job_postings",
+	  SESSIONS_URL: ROOT + "/sessions"
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63264,7 +63284,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 350 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63285,7 +63305,7 @@
 
 	var _reactRedux = __webpack_require__(173);
 
-	var _actionCreatorsApiActionCreators = __webpack_require__(351);
+	var _actionCreatorsApiActionCreators = __webpack_require__(352);
 
 	var apiActionCreators = _interopRequireWildcard(_actionCreatorsApiActionCreators);
 
@@ -63383,7 +63403,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 351 */
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63398,14 +63418,13 @@
 
 	var _request2 = _interopRequireDefault(_request);
 
-	var _constantsApiConstants = __webpack_require__(352);
+	var _constantsApiConstants = __webpack_require__(349);
 
 	var _constantsApiConstants2 = _interopRequireDefault(_constantsApiConstants);
 
 	function fetchJobPostings(page) {
 	  var promise = new Promise(function (resolve, reject) {
 	    var url = _constantsApiConstants2['default'].POSTINGS_INDEX_URL;
-	    console.log(url);
 	    _request2['default'].get({ url: url, qs: { page: page }, json: true }, (function (page, error, response, body) {
 	      var postings = body.job_postings;
 	      var total_pages = body.meta.total_pages;
@@ -63439,21 +63458,6 @@
 	}
 
 /***/ },
-/* 352 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	exports.__esModule = true;
-	var ROOT = "https://better-board-api.herokuapp.com";
-
-	exports["default"] = {
-	  ROOT: ROOT,
-	  POSTINGS_INDEX_URL: ROOT + "/api/job_postings"
-	};
-	module.exports = exports["default"];
-
-/***/ },
 /* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -63473,7 +63477,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _actionCreatorsApiActionCreators = __webpack_require__(351);
+	var _actionCreatorsApiActionCreators = __webpack_require__(352);
 
 	var apiActionCreators = _interopRequireWildcard(_actionCreatorsApiActionCreators);
 
@@ -64690,7 +64694,7 @@
 
 	var _reactRedux = __webpack_require__(173);
 
-	var _actionCreatorsApiActionCreators = __webpack_require__(351);
+	var _actionCreatorsApiActionCreators = __webpack_require__(352);
 
 	var apiActionCreators = _interopRequireWildcard(_actionCreatorsApiActionCreators);
 
