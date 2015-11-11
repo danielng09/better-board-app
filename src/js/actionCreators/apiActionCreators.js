@@ -4,6 +4,7 @@ import apiConstants from '../constants/apiConstants';
 export function fetchJobPostings(page) {
   var promise = new Promise((resolve, reject) => {
     let url = apiConstants.POSTINGS_INDEX_URL;
+    console.log(url)
     request.get({url: url, qs: {page: page}, json: true}, (page, error, response, body) => {
       let postings = body.job_postings;
       let total_pages = body.meta.total_pages;

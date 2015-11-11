@@ -1,3 +1,6 @@
+const ROOT = "https://better-board-api.herokuapp.com";
+
 export default {
-  POSTINGS_INDEX_URL: "http://localhost:3000/api/job_postings"
+  ROOT: ROOT,
+  POSTINGS_INDEX_URL: ROOT + "/api/job_postings"
 };
