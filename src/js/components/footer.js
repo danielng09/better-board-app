@@ -10,9 +10,9 @@ export default class Footer extends React.Component {
     return (
       <div id="footer-container">
         <div id="footer">
-          <i className="fa fa-github-square icon"><a href={github} /></i>
-          <i className="fa fa-linkedin-square icon"><a href={linkedin} /></i>
-          <i className="fa fa-envelope icon"><a href={email} /></i>
+          <a href={github}><i className="fa fa-github-square icon" /></a>
+          <a href={linkedin}><i className="fa fa-linkedin-square icon" /></a>
+          <a href={email}><i className="fa fa-envelope icon" /></a>
         </div>
       </div>
     )

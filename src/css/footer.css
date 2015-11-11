@@ -23,7 +23,7 @@
   padding: 0px 15px;
 }
 
-#footer .icon:first-child {
+#footer a:first-child .icon {
   border: none;
 }
 

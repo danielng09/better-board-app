@@ -64832,19 +64832,19 @@
 	        "div",
 	        { id: "footer" },
 	        _react2["default"].createElement(
-	          "i",
-	          { className: "fa fa-github-square icon" },
-	          _react2["default"].createElement("a", { href: github })
+	          "a",
+	          { href: github },
+	          _react2["default"].createElement("i", { className: "fa fa-github-square icon" })
 	        ),
 	        _react2["default"].createElement(
-	          "i",
-	          { className: "fa fa-linkedin-square icon" },
-	          _react2["default"].createElement("a", { href: linkedin })
+	          "a",
+	          { href: linkedin },
+	          _react2["default"].createElement("i", { className: "fa fa-linkedin-square icon" })
 	        ),
 	        _react2["default"].createElement(
-	          "i",
-	          { className: "fa fa-envelope icon" },
-	          _react2["default"].createElement("a", { href: email })
+	          "a",
+	          { href: email },
+	          _react2["default"].createElement("i", { className: "fa fa-envelope icon" })
 	        )
 	      )
 	    );
