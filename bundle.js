@@ -20470,9 +20470,10 @@
 	  }
 
 	  App.prototype.render = function render() {
-	    var user = this.props.user;
+	    var _props = this.props;
+	    var user = _props.user;
+	    var loading = _props.loading;
 
-	    var showComponent = undefined;
 	    if (user) {
 	      return _react2['default'].createElement(
 	        'div',
@@ -20482,6 +20483,22 @@
 	        _react2['default'].createElement(_postingIndex2['default'], null),
 	        _react2['default'].createElement(_postingDetail2['default'], null),
 	        _react2['default'].createElement(_footer2['default'], null)
+	      );
+	    } else if (loading) {
+	      return _react2['default'].createElement(
+	        'div',
+	        { id: 'main-app' },
+	        _react2['default'].createElement(_login2['default'], null),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'spinner' },
+	          _react2['default'].createElement(
+	            'p',
+	            null,
+	            'Logging in...'
+	          ),
+	          _react2['default'].createElement('span', { className: 'fa fa-4x fa-spin fa-spinner' })
+	        )
 	      );
 	    } else {
 	      return _react2['default'].createElement(
@@ -20494,7 +20511,8 @@
 
 	  var _App = App;
 	  App = _reactRedux.connect(function (state) {
-	    return { user: state.auth.user };
+	    return { user: state.auth.user,
+	      loading: state.auth.loading };
 	  })(App) || App;
 	  return App;
 	})(_react2['default'].Component);

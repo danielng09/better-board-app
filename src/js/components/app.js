@@ -9,14 +9,14 @@ import Footer from './footer';
 
 @connect(state => {
   return (
-    { user: state.auth.user }
+    { user: state.auth.user,
+      loading: state.auth.loading }
   )
 })
 
 export default class App extends React.Component {
   render () {
-    let { user } = this.props;
-    let showComponent;
+    let { user, loading } = this.props;
     if (user) {
       return (
         <div id="main-app">
@@ -25,6 +25,16 @@ export default class App extends React.Component {
           <PostingIndex />
           <PostingDetail />
           <Footer />
+        </div>
+      )
+    } else if (loading) {
+      return (
+        <div id="main-app">
+          <Login />
+          <div className='spinner'>
+            <p>Logging in...</p>
+            <span className="fa fa-4x fa-spin fa-spinner" />
+          </div>
         </div>
       )
     } else {

@@ -21,3 +21,20 @@
 #g-signin2 {
   margin-left: 80px;
 }
+
+.spinner {
+  position: relative;
+  top: 41em;
+  left: 14em;
+  width: 400px;
+  color: white;
+  padding-left: 3em;
+}
+
+.spinner p {
+  font-size: 40px;
+}
+
+.fa-spinner {
+  margin-left: 1em;
+}
