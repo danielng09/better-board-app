@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 import * as authActionCreators from '../actionCreators/authActionCreators';
 
 @connect(state => {
-  return (
-    { user: state.auth.user }
-  )
+  return {}
 })
 
 export default class Login extends React.Component {
@@ -18,14 +16,13 @@ export default class Login extends React.Component {
   }
 
   handleSignIn(googleUser) {
+    let token_id = googleUser.getAuthResponse().id_token;
     let profile = googleUser.getBasicProfile();
     document.getElementById('login-container').style.display = 'none';
-    this.props.dispatch(authActionCreators.login(profile));
+    this.props.dispatch(authActionCreators.login(token_id));
   }
 
   render() {
-    let { user } = this.props;
-
     return (
       <div id='login-container'>
           <div id="login-title"><i className="fa fa-thumb-tack" />&nbsp;&nbsp;better board</div>
