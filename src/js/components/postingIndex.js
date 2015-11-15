@@ -48,7 +48,7 @@ export default class PostingIndex extends React.Component {
       <div id="job-postings-index">
         <p id="page-info">Showing page {page} of {total_pages}</p>
         <Infinite elementHeight={86}
-                  containerHeight={680}
+                  containerHeight={656}
                   infiniteLoadBeginEdgeOffset={150}
                   onInfiniteLoad={::this.handleLoadNextPage}>
           { postings.map(::this.displayPostingItem) }

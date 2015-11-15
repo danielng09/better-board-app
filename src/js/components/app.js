@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Nav from './Nav';
 import Login from './login';
+import Sidebar from './sidebar';
 import PostingIndex from './postingIndex';
 import PostingDetail from './postingDetail';
 import Footer from './footer';
