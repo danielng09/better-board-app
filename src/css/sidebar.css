@@ -1,0 +1,24 @@
+#sidebar {
+  position: fixed;
+  width: 45%;
+  top: 0;
+  right: 0;
+}
+
+#sidebar-nav {
+  height: 6vh;
+}
+
+.sidebar-nav-option {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.sidebar-nav-option:hover {
+  cursor: pointer;
+  background-color: #F76836;
+}

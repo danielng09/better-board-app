@@ -24,7 +24,7 @@ export default class App extends React.Component {
           <Login />
           <Nav />
           <PostingIndex />
-          <PostingDetail />
+          <Sidebar />
           <Footer />
         </div>
       )

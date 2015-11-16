@@ -19,7 +19,7 @@ export default class PostingDetail extends React.Component {
     let sourceName = postDetail.source ? postDetail.source.toUpperCase() : postDetail.source;
 
     return (
-      <div id='job-posting-detail' className='fixed'>
+      <div id='job-posting-detail'>
         <p className="detail-title">{postDetail.title}</p>
         <p className="detail-company">
           <i className="fa fa-building-o" />&nbsp;&nbsp;

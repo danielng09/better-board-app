@@ -13,6 +13,7 @@
 }
 
 #signout {
+  z-index: 5;
   background-color: #FD7C4F;
   color: white;
   text-decoration: none;
@@ -21,5 +22,5 @@
 }
 
 #signout:hover {
-  background-color: #FD7C4F
+  background-color: #F76836;
 }

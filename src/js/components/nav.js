@@ -20,7 +20,7 @@ export default class Nav extends React.Component {
       <nav className="nav navbar-inverse">
         <a className="navbar-brand" href="/"><i className="fa fa-thumb-tack" />&nbsp;&nbsp;better board</a>
         <li className="pull-right">
-        <a href="#" id='signout' onClick={::this.handleSignOut}>Sign Out</a>
+          <a href="#" id='signout' onClick={::this.handleSignOut}>Sign Out</a>
         </li>
       </nav>
     )

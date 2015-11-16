@@ -1,15 +1,11 @@
-.fixed {
-  position: fixed;
-  right: 0;
-}
-
 #job-posting-detail {
   background-color: #40474E;
-  box-shadow: rgba(0,0,0,.05) 0 1px 3px 0;
   color: white;
   padding: 2em 2em 1em 2.2em;
-  width: 40%;
+  width: 45%;
   height: 89vh;
+  position: fixed;
+  right: 0;
 }
 
 .detail-title {
