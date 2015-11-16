@@ -1,10 +1,10 @@
 import request from 'request';
 import apiConstants from '../constants/apiConstants';
 
-export function login(token_id) {
+export function login(id_token) {
   var promise = new Promise((resolve, reject) => {
     let url = apiConstants.SESSIONS_URL;
-    let data = { token_id: token_id };
+    let data = { id_token: id_token };
     request.post({ url: url, form: data, json: true }, (data, error, response, body) => {
       resolve({ user: body })
     }.bind(null, data), function(err) {

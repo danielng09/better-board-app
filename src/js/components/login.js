@@ -16,10 +16,10 @@ export default class Login extends React.Component {
   }
 
   handleSignIn(googleUser) {
-    let token_id = googleUser.getAuthResponse().id_token;
+    let id_token = googleUser.getAuthResponse().id_token;
     let profile = googleUser.getBasicProfile();
     document.getElementById('login-container').style.display = 'none';
-    this.props.dispatch(authActionCreators.login(token_id));
+    this.props.dispatch(authActionCreators.login(id_token));
   }
 
   render() {
