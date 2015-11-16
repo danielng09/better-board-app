@@ -1,6 +1,7 @@
 import React from 'react';
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
 import imageUrlConstants from '../constants/imageUrlConstants';
+require("../../css/postingIndexItem.scss");
 
 export default class PostingIndexItem extends React.Component {
   handlePostingClick (id) {

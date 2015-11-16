@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+require("../../css/app.scss");
 
 import Nav from './Nav';
 import Login from './login';

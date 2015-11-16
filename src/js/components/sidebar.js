@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import sideBarConstants from '../constants/sideBarConstants';
 import * as userInterfaceActionCreators from '../actionCreators/userInterfaceActionCreators';
+require("../../css/sidebar.scss");
 
 import PostingDetail from './postingDetail';
 import Search from './search';

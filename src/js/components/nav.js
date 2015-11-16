@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as authActionCreators from '../actionCreators/authActionCreators';
+require("../../css/nav.scss");
 
 @connect(state => {
   return {};

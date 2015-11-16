@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
 import PostingIndexItem from './postingIndexItem';
 import Infinite from 'react-infinite';
+require("../../css/postingIndex.scss");
 
 @connect(state => {
   return {
