@@ -1,66 +1,71 @@
+$pumpkin-orange: #FDAC3A;
+
 .job-postings-item {
   border-bottom: 1px solid rgba(208, 213, 216, 0.3);
   padding: 1em 1em 1.5em 2.2em;
   color: white;
   position: relative;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 15px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(253,109,72,0.2);
+  }
+
+  .title {
+    color: $pumpkin-orange;
+    font-weight: bold;
+  }
+
+  .company {
+    font-weight: bold;
+    display: left;
+  }
+
+  .activity {
+    float: right;
+    text-align: right;
+  }
+
+  .location {
+    margin-left: 15px;
+  }
+
+  .source-logo {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+  }
+
+  .source-image {
+    height: 20px;
+  }
 }
 
-.job-postings-item:last-child {
-  border-bottom: none;
-  margin-bottom: 15px;
-}
 
-.job-postings-item:hover {
-  cursor: pointer;
-  background-color: rgba(253,109,72,0.2);
-}
+.remove-button-features {
+  &:hover {
+    color: #333;
+    background-color: white;
+    border-color: #ccc;
+    cursor: inherit;
+  }
 
-.job-postings-item .title {
-  color: #FDAC3A;
-  font-weight: bold;
-}
+  &:active {
+    color: #333;
+    background-color: white;
+    border-color: #ccc;
+    -webkit-box-shadow: none;
 
-.job-postings-item .company {
-  font-weight: bold;
-  display: left;
-}
-
-.job-postings-item .activity {
-  float: right;
-  text-align: right;
-}
-
-.job-postings-item .location {
-  margin-left: 15px;
-}
-
-.job-postings-item .source-logo {
-  position: absolute;
-  right: 30px;
-  bottom: 10px;
-}
-
-.remove-button-features:hover {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
-  cursor: inherit;
-}
-
-.remove-button-features:active {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
-  -webkit-box-shadow: none;
-}
-
-.remove-button-features:active:hover {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
-  cursor: none;
-}
-
-.job-postings-item .source-image {
-  height: 20px;
+    &:hover {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+      cursor: none;
+    }
+  }
 }

@@ -1,16 +1,28 @@
+$pumpkin-orange: #FDAC3A;
+$slate-gray: #40474E;
+
 #job-posting-detail {
-  background-color: #40474E;
+  background-color: $slate-gray;
   color: white;
   padding: 2em 2em 1em 2.2em;
   width: 45%;
   height: 89vh;
   position: fixed;
   right: 0;
+  .source-logo {
+    margin-left: 15px;
+  }
+  .source-image {
+    height: 20px;
+  }
+  .activity {
+    margin-left: 15px;
+  }
 }
 
 .detail-title {
   font-size: medium;
-  color: #FDAC3A;
+  color: $pumpkin-orange;
   font-weight: bold;
 }
 
@@ -29,15 +41,4 @@
   height: 70%;
   overflow: auto;
   margin-bottom: 20px;
-}
-
-#job-posting-detail .source-logo {
-  margin-left: 15px;
-}
-
-#job-posting-detail .source-image {
-  height: 20px;
-}
-#job-posting-detail .activity {
-  margin-left: 15px;
 }

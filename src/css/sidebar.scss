@@ -16,9 +16,8 @@
   padding: 15px 20px;
   display: inline-block;
   font-weight: bold;
-}
-
-.sidebar-nav-option:hover {
-  cursor: pointer;
-  background-color: #F76836;
+  &:hover {
+    cursor: pointer;
+    background-color: #F76836;
+  }
 }

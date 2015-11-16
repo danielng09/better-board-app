@@ -1,38 +1,40 @@
+$dark-peach-orange: #DC4E41;
+
 #footer-container {
   position: fixed;
   height: 5vh;
   width: 100%;
-  background-color: #DC4E41;
+  background-color: $dark-peach-orange;
   bottom: 0;
 }
 
 #footer {
   color: white;
   margin-left: 50%;
-}
 
-#footer a{
-  color: white;
-  text-decoration: none;
-}
+  p {
+    font-size: 15px;
+    font-weight: bold;
+  }
 
-#footer .icon {
-  font-size: 30px;
-  border-left: 1px solid white;
-  margin: 0.7vh 0;
-  padding: 0px 15px;
-}
+  a {
+    color: white;
+    text-decoration: none;
 
-#footer a:first-child .icon {
-  border: none;
-}
+    &:first-child .icon {
+      border: none;
+    }
+  }
 
-#footer .icon:hover {
-  color: black;
-  cursor: pointer;
-}
+  .icon {
+    font-size: 30px;
+    border-left: 1px solid white;
+    margin: 0.7vh 0;
+    padding: 0px 15px;
 
-#footer p{
-  font-size: 15px;
-  font-weight: bold;
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
 }
