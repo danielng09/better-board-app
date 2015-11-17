@@ -1,4 +1,6 @@
 $slate-gray: #40474E;
+$dark-peach-orange: #DC4E41;
+$light-peach-orange: #F76836;
 
 #search {
   background-color: $slate-gray;
@@ -6,4 +8,16 @@ $slate-gray: #40474E;
   color: white;
   padding: 2em 2em 1em 2.2em;
   height: 89vh;
+}
+
+#search-form {
+  input {
+    display: inline;
+    width: 70%;
+    height: 39px;
+  }
+  button {
+    font-size: 18px;
+    margin-bottom: 2.5px;
+  }
 }

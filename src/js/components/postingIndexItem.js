@@ -1,11 +1,14 @@
 import React from 'react';
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
+import * as userInterfaceActionCreators from '../actionCreators/userInterfaceActionCreators';
 import imageUrlConstants from '../constants/imageUrlConstants';
+
 require("../../css/postingIndexItem.scss");
 
 export default class PostingIndexItem extends React.Component {
   handlePostingClick (id) {
     this.props.dispatch(apiActionCreators.fetchJobDetail(id));
+    this.props.dispatch(userInterfaceActionCreators.showDetails());
   }
 
   render () {

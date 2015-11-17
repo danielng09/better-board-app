@@ -15,7 +15,7 @@ require("../../css/postingIndex.scss");
 
 export default class PostingIndex extends React.Component {
   componentWillMount () {
-    let { page } = this.props;
+    let { page, postings } = this.props;
     this.props.dispatch(apiActionCreators.fetchJobPostings(page));
   }
 

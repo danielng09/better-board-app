@@ -6,30 +6,38 @@ require("../../css/postingDetail.scss");
 
 @connect(state => {
   return (
-    { postDetail: state.api.postDetail }
+    { postDetail: state.api.postDetail,
+      postings: state.api.postings,
+      loadingPosts: state.api.loadingPosts }
   )
 })
 
 export default class PostingDetail extends React.Component {
+
+  // save newest job posting on load as default detail post if none exists
   componentWillMount () {
-    this.props.dispatch(apiActionCreators.fetchJobDetail(1));
+    let { postDetail, loadingPosts, postings } = this.props;
+    if (Object.getOwnPropertyNames(postDetail).length === 0 && !loadingPosts) {
+      this.props.dispatch(apiActionCreators.fetchJobDetail(postings[0].id));
+    }
   }
 
   render () {
     let { postDetail } = this.props;
     let sourceName = postDetail.source ? postDetail.source.toUpperCase() : postDetail.source;
-
     return (
       <div id='job-posting-detail'>
-        <p className="detail-title">{postDetail.title}</p>
+        <p className="detail-title">
+          {postDetail.title}</p>
+
         <p className="detail-company">
           <i className="fa fa-building-o" />&nbsp;&nbsp;
-          {postDetail.company}
-        </p>
+          {postDetail.company}</p>
+
         <p className="detail-location">
           <i style={{color: '#DBDBDB'}} className="fa fa-map-marker" />&nbsp;&nbsp;
-          {postDetail.location}
-        </p>
+          {postDetail.location}</p>
+
         <p>
           <span className="detail-date">
             <i className="fa fa-calendar"></i>&nbsp;&nbsp;
@@ -38,8 +46,8 @@ export default class PostingDetail extends React.Component {
           <span className="activity">
             <i style={{color:'#DBDBDB'}} className="fa fa-clock-o" />&nbsp;&nbsp;
             {'Posted '  + postDetail.time_ago + ' ago'}
-          </span>
-        </p>
+          </span></p>
+
         <p>
           <a className="btn btn-warning detail-url"
              target="_blank"
@@ -47,9 +55,9 @@ export default class PostingDetail extends React.Component {
           </ a>
           <span className="btn btn-default remove-button-features source-logo">
             <img className="source-image" src={imageUrlConstants[sourceName]} />
-          </span>
-        </p>
-        <p className="detail-description"
+          </span></p>
+
+        <div className="detail-description"
           dangerouslySetInnerHTML={{__html: postDetail.description }} />
       </div>
     )
