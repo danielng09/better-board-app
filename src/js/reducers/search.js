@@ -1,5 +1,5 @@
 const initialState = {
-  text: ""
+  searchInput: ""
 }
 
 export default function search(state = initialState, action) {

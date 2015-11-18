@@ -8,7 +8,6 @@ require("../../css/postingIndexItem.scss");
 export default class PostingIndexItem extends React.Component {
   handlePostingClick (id) {
     let { dispatch } = this.props;
-
     // show detail sidebar only after posting is updated
     dispatch(
       apiActionCreators.fetchJobDetail(id)

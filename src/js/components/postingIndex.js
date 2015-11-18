@@ -11,20 +11,21 @@ require("../../css/postingIndex.scss");
     postings: state.api.postings,
     page: state.api.page,
     postings_total: state.api.postings_total,
-    postings_shown: state.api.postings_shown
+    postings_shown: state.api.postings_shown,
+    searchInput: state.search.searchInput
   }
 })
 
 export default class PostingIndex extends React.Component {
   componentWillMount () {
-    let { page, postings } = this.props;
-    this.props.dispatch(apiActionCreators.fetchJobPostings(page));
+    let { page, postings, searchInput } = this.props;
+    this.props.dispatch(apiActionCreators.fetchJobPostings(page, searchInput));
   }
 
   handleLoadNextPage() {
-    let { page, total_pages } = this.props;
+    let { page, total_pages, searchInput } = this.props;
     if (page === total_pages ) { return; }
-    this.props.dispatch(apiActionCreators.fetchJobPostings(page + 1, ))
+    this.props.dispatch(apiActionCreators.fetchJobPostings(page + 1, searchInput))
   }
 
   trimString(string, maxLength) {

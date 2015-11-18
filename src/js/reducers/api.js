@@ -14,6 +14,16 @@ export default function api(state = initialState, action) {
         loadingPosts: true
       }
 
+    case 'GET_NEW_POSTINGS_SUCCESS':
+      return {
+        ...state,
+        postings: action.res.postings,
+        page: action.res.page,
+        postings_total: action.res.postings_total,
+        postings_shown: action.res.postings_shown,
+        loadingPosts: false
+      }
+
     case 'GET_POSTINGS_SUCCESS':
       return {
         ...state,

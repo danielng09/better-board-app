@@ -2,20 +2,21 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
+import * as searchActionCreators from '../actionCreators/searchActionCreators';
 require("../../css/search.scss");
 
 @connect(state => {
-  return {}
+  return { }
 })
 
 export default class Search extends React.Component {
   handleSearch(event) {
     event.preventDefault();
-    let queryString = this.refs.searchQueryInput.value;
-    // save queryString to store
-    
-    // fetch new job postings
-    this.props.dispatch(apiActionCreators.fetchJobPostings(1, queryString));
+    let { dispatch } = this.props;
+    let searchInput = this.refs.searchQueryInput.value;
+
+    dispatch(searchActionCreators.updateSearchInput(searchInput))
+    dispatch(apiActionCreators.fetchNewJobPostings(1, searchInput))
   }
 
   render() {
