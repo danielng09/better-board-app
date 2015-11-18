@@ -10,9 +10,10 @@ require("../../css/postingIndex.scss");
   return {
     postings: state.api.postings,
     page: state.api.page,
-    postings_total: state.api.postings_total,
-    postings_shown: state.api.postings_shown,
-    searchInput: state.search.searchInput
+    postingsTotal: state.api.postingsTotal,
+    postingsShown: state.api.postingsShown,
+    searchInput: state.search.searchInput,
+    totalPages: state.api.totalPages
   }
 })
 
@@ -23,8 +24,9 @@ export default class PostingIndex extends React.Component {
   }
 
   handleLoadNextPage() {
-    let { page, total_pages, searchInput } = this.props;
-    if (page === total_pages ) { return; }
+    let { page, totalPages, searchInput } = this.props;
+    if (page >= totalPages) { return; };
+    if (page === totalPages ) { return; }
     this.props.dispatch(apiActionCreators.fetchJobPostings(page + 1, searchInput))
   }
 
@@ -47,11 +49,11 @@ export default class PostingIndex extends React.Component {
   }
 
   render () {
-    var { postings, page, postings_total, postings_shown } = this.props;
+    var { postings, page, postingsTotal, postingsShown } = this.props;
 
     return (
       <div id="job-postings-index">
-        <p id="page-info">Showing <strong>{postings_shown}</strong> out of <strong>{postings_total}</strong> results</p>
+        <p id="page-info">Showing <strong>{postingsShown}</strong> out of <strong>{postingsTotal}</strong> results</p>
         <Infinite elementHeight={86}
                   containerHeight={656}
                   infiniteLoadBeginEdgeOffset={150}

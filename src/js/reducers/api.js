@@ -19,8 +19,9 @@ export default function api(state = initialState, action) {
         ...state,
         postings: action.res.postings,
         page: action.res.page,
-        postings_total: action.res.postings_total,
-        postings_shown: action.res.postings_shown,
+        totalPages: action.res.totalPages,
+        postingsTotal: action.res.postingsTotal,
+        postingsShown: action.res.postingsShown,
         loadingPosts: false
       }
 
@@ -29,8 +30,9 @@ export default function api(state = initialState, action) {
         ...state,
         postings: state.postings.concat(action.res.postings),
         page: action.res.page,
-        postings_total: action.res.postings_total,
-        postings_shown: action.res.postings_shown,
+        totalPages: action.res.totalPages,
+        postingsTotal: action.res.postingsTotal,
+        postingsShown: action.res.postingsShown,
         loadingPosts: false
       }
 

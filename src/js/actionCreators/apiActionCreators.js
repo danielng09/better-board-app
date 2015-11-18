@@ -9,12 +9,14 @@ export function fetchNewJobPostings(page, queryString) {
                   qs: { search: { page: page, q: queryString } } },
                 (page, error, response, body) => {
                   let postings = body.job_postings;
-                  let postings_total = body.meta.postings_total;
-                  let postings_shown = body.meta.postings_shown;
+                  let postingsTotal = body.meta.postings_total;
+                  let postingsShown = body.meta.postings_shown;
+                  let totalPages = body.meta.total_pages;
                   resolve({ postings,
-                            postings_total: postings_total,
-                            postings_shown: postings_shown,
-                            page: page })
+                            postingsTotal: postingsTotal,
+                            postingsShown: postingsShown,
+                            page: page,
+                            totalPages: totalPages })
                   }.bind(null, page),
                 function(err) {
                   reject(err);
@@ -38,12 +40,14 @@ export function fetchJobPostings(page, queryString) {
                   qs: { search: { page: page, q: queryString } } },
                 (page, error, response, body) => {
                   let postings = body.job_postings;
-                  let postings_total = body.meta.postings_total;
-                  let postings_shown = body.meta.postings_shown;
+                  let postingsTotal = body.meta.postings_total;
+                  let postingsShown = body.meta.postings_shown;
+                  let totalPages = body.meta.total_pages;
                   resolve({ postings,
-                            postings_total: postings_total,
-                            postings_shown: postings_shown,
-                            page: page })
+                            postingsTotal: postingsTotal,
+                            postingsShown: postingsShown,
+                            page: page,
+                            totalPages: totalPages })
                   }.bind(null, page),
                 function(err) {
                   reject(err);
