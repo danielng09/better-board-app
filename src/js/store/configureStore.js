@@ -1,4 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import reducer from '../reducers';
 
 var promiseMiddleware = function () {
@@ -17,7 +18,7 @@ var promiseMiddleware = function () {
   };
 }
 
-const finalCreateStore = applyMiddleware(promiseMiddleware)(createStore);
+const finalCreateStore = applyMiddleware(promiseMiddleware, thunk)(createStore);
 
 export default function configureStore(initialState) {
   const store = finalCreateStore(reducer, initialState);

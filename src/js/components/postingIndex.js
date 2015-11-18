@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Infinite from 'react-infinite';
+
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
 import PostingIndexItem from './postingIndexItem';
-import Infinite from 'react-infinite';
 require("../../css/postingIndex.scss");
 
 @connect(state => {
@@ -23,7 +24,7 @@ export default class PostingIndex extends React.Component {
   handleLoadNextPage() {
     let { page, total_pages } = this.props;
     if (page === total_pages ) { return; }
-    this.props.dispatch(apiActionCreators.fetchJobPostings(page + 1))
+    this.props.dispatch(apiActionCreators.fetchJobPostings(page + 1, ))
   }
 
   trimString(string, maxLength) {

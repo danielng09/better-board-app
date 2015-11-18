@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-require("../../css/app.scss");
 
 import Nav from './Nav';
 import Login from './login';
@@ -8,6 +7,7 @@ import Sidebar from './sidebar';
 import PostingIndex from './postingIndex';
 import PostingDetail from './postingDetail';
 import Footer from './footer';
+require("../../css/app.scss");
 
 @connect(state => {
   return (

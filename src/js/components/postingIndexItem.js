@@ -1,16 +1,20 @@
 import React from 'react';
+
+import imageUrlConstants from '../constants/imageUrlConstants';
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
 import * as userInterfaceActionCreators from '../actionCreators/userInterfaceActionCreators';
-import imageUrlConstants from '../constants/imageUrlConstants';
-
 require("../../css/postingIndexItem.scss");
 
 export default class PostingIndexItem extends React.Component {
   handlePostingClick (id) {
-    this.props.dispatch(apiActionCreators.fetchJobDetail(id));
-    // renders new detail panel before detail posting is updated => blinks
-    // fix this by only dispatching showDetails when fetch is done
-    this.props.dispatch(userInterfaceActionCreators.showDetails());
+    let { dispatch } = this.props;
+
+    // show detail sidebar only after posting is updated
+    dispatch(
+      apiActionCreators.fetchJobDetail(id)
+    ).then(() => {
+      dispatch(userInterfaceActionCreators.showDetails())
+    });
   }
 
   render () {

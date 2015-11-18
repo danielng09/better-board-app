@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
 import * as apiActionCreators from '../actionCreators/apiActionCreators';
 require("../../css/search.scss");
 
@@ -8,14 +9,24 @@ require("../../css/search.scss");
 })
 
 export default class Search extends React.Component {
+  handleSearch(event) {
+    event.preventDefault();
+    let queryString = this.refs.searchQueryInput.value;
+    // save queryString to store
+    
+    // fetch new job postings
+    this.props.dispatch(apiActionCreators.fetchJobPostings(1, queryString));
+  }
+
   render() {
     return (
       <div id='search'>
         <form id='search-form'>
           <input type='text'
+                 ref="searchQueryInput"
                  className='form-control'
                  placeholder='Enter a keyword' />
-          <button type="submit" className="btn btn-danger">
+          <button className="btn btn-danger" onClick={::this.handleSearch}>
             <i className="fa fa-search" /></button>
         </form>
         <br />

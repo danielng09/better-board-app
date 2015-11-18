@@ -1,14 +1,12 @@
 import request from 'request';
 import apiConstants from '../constants/apiConstants';
 
-export function fetchJobPostings(page) {
+export function fetchJobPostings(page, queryString) {
   let promise = new Promise((resolve, reject) => {
-
     let url = apiConstants.POSTINGS_INDEX_URL;
-
     request.get({ url: url,
                   json: true,
-                  qs: { search: { page: page } } },
+                  qs: { search: { page: page, q: queryString } } },
                 (page, error, response, body) => {
                   let postings = body.job_postings;
                   let postings_total = body.meta.postings_total;

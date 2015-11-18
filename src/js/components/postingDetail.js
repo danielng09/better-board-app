@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as apiActionCreators from '../actionCreators/apiActionCreators';
 import imageUrlConstants from '../constants/imageUrlConstants';
+
+import * as apiActionCreators from '../actionCreators/apiActionCreators';
 require("../../css/postingDetail.scss");
 
 @connect(state => {
