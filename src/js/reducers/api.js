@@ -2,7 +2,8 @@ const initialState = {
   postings: [],
   postDetail: {},
   page: 1,
-  total_pages: 1
+  postings_total: 0,
+  postings_shown: 0
 }
 
 export default function api(state = initialState, action) {
@@ -18,7 +19,8 @@ export default function api(state = initialState, action) {
         ...state,
         postings: state.postings.concat(action.res.postings),
         page: action.res.page,
-        total_pages: action.res.total_pages,
+        postings_total: action.res.postings_total,
+        postings_shown: action.res.postings_shown,
         loadingPosts: false
       }
 

@@ -9,7 +9,8 @@ require("../../css/postingIndex.scss");
   return {
     postings: state.api.postings,
     page: state.api.page,
-    total_pages: state.api.total_pages
+    postings_total: state.api.postings_total,
+    postings_shown: state.api.postings_shown
   }
 })
 
@@ -44,10 +45,11 @@ export default class PostingIndex extends React.Component {
   }
 
   render () {
-    var { postings, page, total_pages } = this.props;
+    var { postings, page, postings_total, postings_shown } = this.props;
+
     return (
       <div id="job-postings-index">
-        <p id="page-info">Showing page {page} of {total_pages}</p>
+        <p id="page-info">Showing <strong>{postings_shown}</strong> out of <strong>{postings_total}</strong> results</p>
         <Infinite elementHeight={86}
                   containerHeight={656}
                   infiniteLoadBeginEdgeOffset={150}

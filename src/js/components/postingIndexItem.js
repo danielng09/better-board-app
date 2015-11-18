@@ -8,6 +8,8 @@ require("../../css/postingIndexItem.scss");
 export default class PostingIndexItem extends React.Component {
   handlePostingClick (id) {
     this.props.dispatch(apiActionCreators.fetchJobDetail(id));
+    // renders new detail panel before detail posting is updated => blinks
+    // fix this by only dispatching showDetails when fetch is done
     this.props.dispatch(userInterfaceActionCreators.showDetails());
   }
 
