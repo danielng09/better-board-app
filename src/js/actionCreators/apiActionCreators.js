@@ -3,6 +3,7 @@ import apiConstants from '../constants/apiConstants';
 
 export function fetchJobPostings(page) {
   let promise = new Promise((resolve, reject) => {
+
     let url = apiConstants.POSTINGS_INDEX_URL;
 
     request.get({ url: url,
@@ -43,7 +44,7 @@ export function fetchJobDetail(id) {
                     reject(err);
                   }
                );
-  })
+  });
 
   return {
     types: ["GET_POST_REQUEST",
