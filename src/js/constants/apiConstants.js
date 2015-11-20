@@ -1,5 +1,5 @@
-const ROOT = "http://localhost:3000"
-// "https://better-board-api.herokuapp.com";
+const ROOT = "https://better-board-api.herokuapp.com";
+// "http://localhost:3000"
 
 export default {
   ROOT: ROOT,

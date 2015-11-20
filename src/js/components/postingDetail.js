@@ -14,15 +14,6 @@ require("../../css/postingDetail.scss");
 })
 
 export default class PostingDetail extends React.Component {
-
-  // save newest job posting on load as default detail post if none exists
-  componentWillMount () {
-    let { postDetail, loadingPosts, postings } = this.props;
-    if (Object.getOwnPropertyNames(postDetail).length === 0 && !loadingPosts) {
-      this.props.dispatch(apiActionCreators.fetchJobDetail(postings[0].id));
-    }
-  }
-
   render () {
     let { postDetail } = this.props;
     let sourceName = postDetail.source ? postDetail.source.toUpperCase() : postDetail.source;

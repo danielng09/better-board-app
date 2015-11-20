@@ -1,5 +1,5 @@
 const initialState = {
-  sidebarView: "search"
+  sidebarView: "details"
 }
 
 export default function userInterface(state = initialState, action) {

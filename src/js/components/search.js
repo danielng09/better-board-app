@@ -16,7 +16,12 @@ export default class Search extends React.Component {
     let searchInput = this.refs.searchQueryInput.value;
 
     dispatch(searchActionCreators.updateSearchInput(searchInput))
-    dispatch(apiActionCreators.fetchNewJobPostings(1, searchInput))
+    dispatch(
+      apiActionCreators.fetchNewJobPostings(1, searchInput)
+    ).then((action) => {
+      let id = action.res.postings[0].id
+      dispatch(apiActionCreators.fetchJobDetail(id))
+    });
   }
 
   render() {
