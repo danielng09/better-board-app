@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body {
+  font-family: 'Droid Sans', sans-serif
+}
+
+body#background {
+  background: url('http://res.cloudinary.com/ds6oys8ca/image/upload/c_scale,w_1200/v1447023829/Autumn-Forest-Patrol-HD_zryyub.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #FD7C4F;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}

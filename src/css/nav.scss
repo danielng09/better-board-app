@@ -1,0 +1,30 @@
+$dark-peach-orange: #DC4E41;
+$light-peach-orange: #F76836;
+
+.navbar-inverse {
+  background-color: $dark-peach-orange;
+  font-weight: bold;
+
+  .navbar-brand {
+    color: white;
+
+    &:hover {
+      background-color: $light-peach-orange;
+    }
+  }
+}
+
+
+
+#signout {
+  z-index: 5;
+  background-color: #FD7C4F;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  height: 6vh;
+
+  &:hover {
+    background-color: $light-peach-orange;
+  }
+}

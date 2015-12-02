@@ -1,0 +1,40 @@
+#login-title {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+  margin-right: 75px;
+}
+
+#login-container {
+  position: relative;
+  top: 41em;
+  left: 14em;
+  width: 400px;
+}
+
+#login-tagline {
+  color: #FD7C4F;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#g-signin2 {
+  margin-left: 80px;
+}
+
+.spinner {
+  position: relative;
+  top: 41em;
+  left: 14em;
+  width: 400px;
+  color: white;
+  padding-left: 3em;
+  
+  p {
+    font-size: 40px;
+  }
+}
+
+.fa-spinner {
+  margin-left: 1em;
+}
